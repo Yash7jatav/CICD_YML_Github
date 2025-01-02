@@ -1,11 +1,17 @@
 const express = require("express");
 const cors = require("cors");
 const { getAllEmployees, getEmployeeById } = require("./controllers/index");
+const { homePage } = require("./src/index");
 
 const app = express();
 const port = 3000;
 
 app.use(cors());
+
+//Home.
+app.get("/", (req, res) => {
+  return res.status(200).json({ Details: homePage });
+});
 
 //Exercise 1: Retrieve All Employees.
 app.get("/employees", async (req, res) => {
