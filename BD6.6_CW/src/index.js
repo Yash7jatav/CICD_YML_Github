@@ -18,4 +18,4 @@ const homePage = {
   documentation_url: "https://api.company.com/docs",
 };
 
-module.exports = homePage;
+module.exports = { homePage };
